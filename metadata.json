@@ -1,0 +1,5 @@
+{
+  "name": "QR Pro Generator",
+  "description": "A professional, client-side QR code generator with customization options for colors, logos, and multiple export formats. Built for speed and privacy without external APIs.",
+  "requestFramePermissions": []
+}
