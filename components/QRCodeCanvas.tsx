@@ -30,12 +30,20 @@ export const QRCodeCanvasWrapper: React.FC<QRCodeCanvasProps> = ({ config, canva
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-100 flex justify-center items-center overflow-hidden relative">
-      {/* Visible Canvas for PNG/JPG */}
-      <QRCodeCanvas ref={canvasRef} {...commonProps} />
+      {/* Visible Canvas for PNG/JPG - ID added for robust selection */}
+      <QRCodeCanvas 
+        ref={canvasRef} 
+        id="qr-code-canvas-element"
+        {...commonProps} 
+      />
       
-      {/* Hidden SVG for Vector Download */}
+      {/* Hidden SVG for Vector Download - ID added for robust selection */}
       <div style={{ display: 'none' }}>
-        <QRCodeSVG ref={svgRef} {...commonProps} />
+        <QRCodeSVG 
+          ref={svgRef} 
+          id="qr-code-svg-element"
+          {...commonProps} 
+        />
       </div>
     </div>
   );
